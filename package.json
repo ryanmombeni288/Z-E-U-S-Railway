@@ -1,0 +1,25 @@
+{
+  "name": "zeus-panel-railway",
+  "version": "1.11.4-railway.1",
+  "private": true,
+  "type": "module",
+  "description": "Railway-native compatibility port of ZEUS PANEL",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "migrate": "node scripts/migrate.js",
+    "import:d1": "node scripts/import-d1.js",
+    "test": "node --test --test-concurrency=1",
+    "check": "node --check Source.js && node --check src/server.js"
+  },
+  "dependencies": {
+    "pg": "^8.16.3",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "pg-mem": "^3.0.5"
+  }
+}
